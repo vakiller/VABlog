@@ -1,0 +1,48 @@
+doctype html
+html(ng-app="vaBlog")
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet',href='/stylesheets/bootstrap4.0.0/css/bootstrap.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js')  
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js")
+    script(src='/javascripts/jquery-3.3.1.min.js')
+    script(src='/stylesheets/bootstrap4.0.0/js/bootstrap.js')
+    script(src='/angular/app.module.js')
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  body  
+    nav.navbar.navbar-expand-lg.navbar-light.bg.fixed-top 
+      //a.navbar-brand(href="/") VanhLe's Blog
+      button.navbar-toggler(type="button",data-toggle="collapse" data-target="#navbarColapse")
+        span.navbar-toggler-icon
+      div.collapse.navbar-collapse#navbarColapse 
+        
+        ul.navbar-nav.mr-auto(style = "margin-left : 30px")
+          li.nav-item
+            a.nav-link(href="#") Home 
+          li.nav-item
+            a.nav-link(href="/") Lập trình 
+          li.nav-item
+            a.nav-link(href="/") Tản mạn
+          li.nav-item
+            a.nav-link(href="/") Phượt
+          li.nav-item
+            a.nav-link(href="/about") About me
+        ul.navbar-nav.navbar-right(style = "margin-right : 30px")
+          a.nav-link(href="https://www.facebook.com/vanhle97")  
+            i.fab.fa-facebook-f
+          a.nav-link(href="https://www.instagram.com/viet_anh_mai/")
+            i.fab.fa-instagram
+          a.nav-link(href="https://www.youtube.com/channel/UC7fk3zX0xO9nbrva98PWUUA?view_as=subscriber")
+            i.fab.fa-youtube
+    .quote
+      a(href="/") VanhLe's Blog
+      p một blog rất màu mè  
+
+  div.container
+    block content

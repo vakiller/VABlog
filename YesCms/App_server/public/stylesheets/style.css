@@ -1,0 +1,77 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #DEDEDE!important;
+}
+.bg{
+  background-color: #FFF!important;
+}
+nav ul li a:hover{
+  color: #fa4b2a!important;
+}
+.navbar-brand{
+  font-family: 'Fredericka the Great', cursive;
+}
+.nav-link{
+  color: rgb(48, 48, 48)!important;
+  font-family: 'Quicksand', sans-serif;
+}
+.nav-custom{
+  color: #fa4b2a!important;
+  margin: 20px;
+}
+.navbar-brand{
+  color: #fa4b2a!important;
+}
+img:hover{
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  position: absolute;
+}
+.textimg{
+  position: absolute;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+   margin-top: 300px;
+  margin-left: 100px;
+}
+.quote{
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #FFF;
+}
+.quote a{
+  color: #022430!important;
+  font-size: 75px;
+  font-family: 'Shadows Into Light Two', cursive;
+  text-decoration: none!important;
+}
+.quote p{
+  font-family:  'Quicksand', sans-serif;;
+  font-size: 20px;
+  color: #9DB4CB;
+}
+.lastestPost{
+  float: left;
+  width: 100%;
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+.sideRight{
+  float: right;
+  width: 100%;
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.newPost{
+  float: left;
+  width: 100%;
+  background: white;
+  /* margin-top: 10px; */
+  margin-bottom: 10px;
+  margin-right: 15px;
+}

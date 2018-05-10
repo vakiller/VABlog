@@ -5,5 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.sendFile('index.html');
 });
-
+router.get('/post/detail',function(req,res,next){
+  res.sendfile('/views/postdetail.html');
+});
 module.exports = router;

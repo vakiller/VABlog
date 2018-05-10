@@ -1,8 +1,8 @@
 angular.module('vaBlog')
-.controller('program_ctl',['$scope','$http','loadPost',function($scope,$http,loadPost){
+.controller('program_ctl',['$scope','$http','loadPost','$sce',function($scope,$http,loadPost,$sce){
+        //import { markdown } from "markdown";
         $scope.posts;
         $scope.last;
-        console.log($scope.last);
         $scope.err;
         getall();
         getLast();
@@ -18,10 +18,14 @@ angular.module('vaBlog')
         function getLast(){
             loadPost.getLast()
             .then(function (response){
-                $scope.last = response.data;
-                console.log($scope.last.h1Post);
+                $scope.last = response.data[0];
+                $scope.content =  response.data[0].Content;
+                var converter = new showdown.Converter();
+                $scope.contenthtml = $sce.trustAsHtml(converter.makeHtml($scope.content));
+                console.log($scope.contenthtml);
             },function (error){
                 $scope.err = error;
             });
         };
+        //function getbyid();
 }]);

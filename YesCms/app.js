@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var markdown = require("markdown").markdown;
 
 var indexRouter = require('./App_server/routes/index');
 var usersRouter = require('./App_server/routes/users');
@@ -13,9 +14,8 @@ var db = require('./App_api/Model/Db');
 var app = express();
 
 // view engine setup
-// app.set('views', path.join(__dirname,'App_server','views'));
+//app.set('views', path.join(__dirname,'App_server/public/','views'));
 // app.set('view engine', 'pug');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

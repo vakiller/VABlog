@@ -1,6 +1,10 @@
 angular.module('vaBlog')
 .config(function($routeProvider){
     $routeProvider
+    .when("/",{
+        templateUrl : "/views/program.html",
+        controller : "program_ctl"
+    })
     .when("/program",{
         templateUrl : "/views/program.html",
         controller : "program_ctl"

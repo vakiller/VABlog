@@ -9,5 +9,8 @@ angular.module("vaBlog")
     loadPost.getLast = function() {
         return $http.get(baseUrl+'/new');
     };
+    loadPost.getPostById = function(id) {
+        return $http.get(baseUrl+"/:id");
+    }
     return loadPost;
 }]);

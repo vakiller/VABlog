@@ -1,11 +1,22 @@
-<div class="lastestPost col-sm-8">
+<div class="lastestPost col-sm-7">
     <ul class="list-group">
-        <li class="list-group-item">{{last.h1Post}}</li>
+        <img src="/images/Last.jpg" width="100%" height="430">
+        <li class="list-group-item"><a href="http://localhost:3000/post/{{last._id}}">{{last.h1Post}}</a> 
+            <p style="margin-bottom: 2px!important;" class="subject">Lập trình /  {{last.creatOn | datert | date : 'dd.M.yyyy'}}</p>  
+           <p class="tag" style="margin-bottom: 2px!important;"> Tag:</p> <span ng-repeat="tag in last.Tag" class="badge tagc badge-secondary">{{tag}}</span>
+        </li>
+         
     </ul>   
 </div>
-<div class="sideRight col-sm-3" >
-    <p></p>
+<div class="sideRight col-sm-4" >
+    <ul class="list-group">
+        <li class="headrecen">Các bài viết gần đây        
+        </li>
+        <li  class="recentPost" ng-repeat="ps in posts">
+            <img src="images/Last.jpg" width="100px" height="70px">
+            <a href="/">{{ps.h1Post}}</a>
+        </li> 
+    </ul>
+    
 </div>
-<div class="newPost col-sm-8" ng-repeat="post in posts">
-    <p>{{post}}</p>
-</div>
+  

@@ -2,8 +2,12 @@ angular.module('vaBlog')
 .config(function($routeProvider){
     $routeProvider
     .when("/",{
-        templateUrl : "/views/program.html",
-        controller : "program_ctl"
+        templateUrl : "/views/home.html",
+        //controller : "home_ctl"
+    })
+    .when("/baiviet/:id",{
+        templateUrl : "/views/detailpost.html",
+        controller : "detailpost_ctl"
     })
     .when("/program",{
         templateUrl : "/views/program.html",
@@ -15,6 +19,7 @@ angular.module('vaBlog')
     })
     .when("/packback",{
         templateUrl : "/views/packback.html",
-        controller : "packback_ctl.js"
+        controller : "packback_ctl"
     })
+    
 });

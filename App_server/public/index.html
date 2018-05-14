@@ -4,6 +4,7 @@
         <title>It's llean</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/poststyle.css">
         <link rel="stylesheet" href="/stylesheets/bootstrap4.0.0/css/bootstrap.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
@@ -22,26 +23,11 @@
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
     <div ng-include="'/views/layout.html'"></div>
-    <div class="quote"><a href="/">VanhLe's Blog</a>
-        <p>The one who walk alone </p>
-    </div>
-    <div class="container">
-            <div class="row">
-                    <div class="col-sm-4"><a href="#!program"><img src="/images/program.jpeg"/><p class="textimg">Lập trình</p></a></div>
-                    <div class="col-sm-4"><a href="#!texts"><img src="/images/notebook.jpg"/><p class="textimg">Tản mạn</p></a></div>
-                    <div class="col-sm-4"><a href="#!packback"><img src="/images/backpack.jpeg"/><p class="textimg">Phượt</p><div class="row"></div></a>
-            </div> 
-    </div>    
-</body>
-<div class="container">
-        <div class="sideRight col-sm-4" style="margin-top: 40px;" > 
-                <img src="images/author.jpg" class="about_img"> 
-                <h2 style="font-size: 18px;text-align: center;margin-top: 15px">Hi,I'm Lleann!</h2>
-        </div>        
-    <div ng-view></div>   
-</div>
+    <div ng-view></div>
 
+</body>
 </html>

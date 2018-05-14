@@ -1,7 +1,9 @@
+<div ng-include="'/views/home.html'"></div>
+<div class="container">
 <div class="lastestPost col-sm-7">
     <ul class="list-group">
         <img src="/images/Last.jpg" width="100%" height="430">
-        <li class="list-group-item"><a href="http://localhost:3000/post/{{last._id}}">{{last.h1Post}}</a> 
+        <li class="list-group-item"><a href="#!/baiviet/{{last._id}}">{{last.h1Post}}</a> 
             <p style="margin-bottom: 2px!important;" class="subject">Lập trình /  {{last.creatOn | datert | date : 'dd.M.yyyy'}}</p>  
            <p class="tag" style="margin-bottom: 2px!important;"> Tag:</p> <span ng-repeat="tag in last.Tag" class="badge tagc badge-secondary">{{tag}}</span>
         </li>
@@ -14,9 +16,14 @@
         </li>
         <li  class="recentPost" ng-repeat="ps in posts">
             <img src="images/Last.jpg" width="100px" height="70px">
-            <a href="/">{{ps.h1Post}}</a>
+            <a href="#!/baiviet/{{ps._id}}">{{ps.h1Post}}</a>
         </li> 
     </ul>
     
+</div>
+<div class="sideRight col-sm-4" style="margin-top: 40px;" > 
+    <img src="images/author.jpg" class="about_img"> 
+    <h2 style="font-size: 18px;text-align: center;margin-top: 15px">Hi,I'm Lleann!</h2>
+</div>
 </div>
   

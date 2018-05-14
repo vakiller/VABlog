@@ -10,7 +10,7 @@ angular.module("vaBlog")
         return $http.get(baseUrl+'/new');
     };
     loadPost.getPostById = function(id) {
-        return $http.get(baseUrl+"/:id");
+        return $http.get(baseUrl+"/"+id);
     }
     return loadPost;
 }]);

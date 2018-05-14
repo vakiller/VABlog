@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://llean:Abc123-=@vablog-mfv8r.mongodb.net/test');
+mongoose.connect('mongodb+srv://llean:vanh1902@vablog-mfv8r.mongodb.net/vaBlog');
 mongoose.connection.on('connected', function () {
     console.log('Mongoose connected ');
     });

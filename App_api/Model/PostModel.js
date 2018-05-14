@@ -7,6 +7,7 @@ var postSchema = new Schema ({
     author : [author],
     creatOn : {type: Date, default: Date.now},
     Tag : [String],
-    Content : String
+    Content : String,
+    h1Post : String
 });
 mongoose.model('posts',postSchema,'Posts');

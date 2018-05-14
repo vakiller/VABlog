@@ -1,0 +1,19 @@
+.titlepost{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 40px;
+}
+.postview{
+    background-color: #fff;
+}
+.dateview{
+    color: #9BE564;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+.contentpost{
+    margin-top: 30px;
+}

@@ -10,6 +10,7 @@ var request = require("request-promise");
 var indexRouter = require('./App_server/routes/index');
 var usersRouter = require('./App_server/routes/users');
 var appApiRouter = require('./App_api/Router/appRouter');
+var adminRouter = require('.App_admin/routers/admin');
 var db = require('./App_api/Model/Db');
 //var adminApiRouter = require('./App_api/Router/adminRouter');
 var app = express();
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'App_server/public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api',appApiRouter);
+app.use('/admin',adminRouter);
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   next(createError(404));

@@ -4,11 +4,14 @@
     </title>
 </head>
 <div class="container postview">
-    <img src="/images/Last1.jpg" width="100%">
+    <img src="{{post.imageHeader}}" width="100%">
     
     <h1 class="titlepost">{{post.h1Post}}</h1>
     <p class="dateview"> By {{post.author[0].name}} - {{post.creatOn | datert | date : 'dd.M.yyyy'}} </p>
     <div class="contentpost">
         <div ng-bind-html="contenthtml"></div>
+    </div>
+    <div class="footerPost">
+        
     </div>
 </div>

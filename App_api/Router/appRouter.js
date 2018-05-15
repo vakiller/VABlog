@@ -6,6 +6,7 @@ var PostC = require('../Controller/PostCtl');
 //var AdminC = require('../Controller/AdminCtl');
 // define router api app
 router.get('/Posts/new',PostC.getRecent);
+router.get('/image/header/:postID',PostC.getHeaderImg);
 router.get('/Posts',PostC.getAll);
 router.get('/Posts/:postID',PostC.getbyID);
 router.post('/Posts',PostC.newPost);

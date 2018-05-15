@@ -2,7 +2,7 @@
 <div class="container">
 <div class="lastestPost col-sm-7">
     <ul class="list-group">
-        <img src="/images/Last.jpg" width="100%" height="430">
+        <img src="{{last.imageHeader}}" width="100%" height="430">
         <li class="list-group-item"><a href="#!/baiviet/{{last._id}}">{{last.h1Post}}</a> 
             <p style="margin-bottom: 2px!important;" class="subject">Lập trình /  {{last.creatOn | datert | date : 'dd.M.yyyy'}}</p>  
            <p class="tag" style="margin-bottom: 2px!important;"> Tag:</p> <span ng-repeat="tag in last.Tag" class="badge tagc badge-secondary">{{tag}}</span>
@@ -15,7 +15,7 @@
         <li class="headrecen">Các bài viết gần đây        
         </li>
         <li  class="recentPost" ng-repeat="ps in posts">
-            <img src="images/Last.jpg" width="100px" height="70px">
+            <img src="{{ps.imageHeader}}" width="100px" height="70px">
             <a href="#!/baiviet/{{ps._id}}">{{ps.h1Post}}</a>
         </li> 
     </ul>
@@ -24,6 +24,18 @@
 <div class="sideRight col-sm-4" style="margin-top: 40px;" > 
     <img src="images/author.jpg" class="about_img"> 
     <h2 style="font-size: 18px;text-align: center;margin-top: 15px">Hi,I'm Lleann!</h2>
+    <p style="text-align: center">I'm from Academy of Cryptography Technique.I'm a web developer too.Thank for visiting my blog</p>
+    <p style="text-align: center">Flow me on</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+                <li class="list-inline-item"><a class="nav-link" href="https://www.facebook.com/vanhle97"> <i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="nav-link" href="https://www.instagram.com/viet_anh_mai/"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a class="nav-link" href="https://www.youtube.com/channel/UC7fk3zX0xO9nbrva98PWUUA?view_as=subscriber"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        </hr>
+    </div>	
 </div>
 </div>
   

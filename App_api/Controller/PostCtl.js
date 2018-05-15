@@ -134,3 +134,12 @@ module.exports.deletePost = function(req,res){
         sendJson(res,400,{"Mess" : "Can't found the request"});
     }
 };
+module.exports.getHeaderImg = function(req,res){
+    if(req.params && req.params.postID)
+    {
+        gfs.files.find({metadata : {_id_post : req.params.postID}}).toArray(function (err,files){
+            if(err) console.log(err);
+            console.log(files);
+        })
+    }
+};

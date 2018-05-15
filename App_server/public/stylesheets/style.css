@@ -51,6 +51,15 @@ a img:hover{
   padding-top: 40px;
   background-color: #FFF;
 }
+.quotef {
+  text-align: center;
+}
+.quotef a{
+  color: #022430!important;
+  font-size: 20px;
+  font-family: 'Shadows Into Light Two', cursive;
+  text-decoration: none!important;
+}
 .quote a{
   color: #022430!important;
   font-size: 75px;
@@ -130,4 +139,12 @@ a img:hover{
   color: silver;
   padding: 20px;
 
+}
+.mainfooter{
+  margin-top: 30px;
+  /* //background-color: #FFF; */
+  bottom: 0;
+  width: 100%;
+  text-align: center!important;
+  position: relative;
 }

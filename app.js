@@ -10,7 +10,7 @@ var request = require("request-promise");
 var indexRouter = require('./App_server/routes/index');
 var usersRouter = require('./App_server/routes/users');
 var appApiRouter = require('./App_api/Router/appRouter');
-var adminRouter = require('.App_admin/routers/admin');
+var adminRouter = require('./App_admin/Router/adminRouter');
 var db = require('./App_api/Model/Db');
 //var adminApiRouter = require('./App_api/Router/adminRouter');
 var app = express();
@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'App_server/public')));
-
+app.use('/static',express.static(path.join(__dirname,'App_admin/public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api',appApiRouter);

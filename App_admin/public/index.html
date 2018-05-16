@@ -1,137 +1,53 @@
-<!doctype html>
-<html lang="en" ng-app="RDash">
+<!DOCTYPE html>
+<html ng-app="yesCSM">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quản lý Blog by Llean</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/stylesheet/style.css">
+        <!-- <link rel="stylesheet" href="/stylesheets/poststyle.css"> -->
+        <link rel="stylesheet" href="static/stylesheet/bootstrap4.0.0/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+        <script src="static/libs/jquery-3.3.1.min.js"></script>
+        <script src="static/stylesheet/bootstrap4.0.0/js/bootstrap.js"></script>
+        <script src="static/javascript/admin.module.js"></script>
+        <script src="static/javascript/admin.config.js"></script>
+        
 
-	<title>RDash AngularJS</title>
-  <!-- STYLES -->
-  <!-- build:css lib/css/main.min.css -->
-  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
-  <!-- endbuild -->
-  <!-- SCRIPTS -->
-  <!-- build:js lib/js/main.min.js -->
-  <script type="text/javascript" src="components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
-  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <!-- endbuild -->
-  <!-- Custom Scripts -->
-  <script type="text/javascript" src="js/dashboard.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
-<body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
-
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-      <ul class="sidebar">
-        <li class="sidebar-main">
-          <a ng-click="toggleSidebar()">
-            Dashboard
-            <span class="menu-icon glyphicon glyphicon-transfer"></span>
-          </a>
-        </li>
-        <li class="sidebar-title"><span>NAVIGATION</span></li>
-        <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
-        </li>
-        <li class="sidebar-list">
-          <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
-        </li>
-      </ul>
-      <div class="sidebar-footer">
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-angular" target="_blank">
-            Github
-          </a>
-        </div>
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-angular/blob/master/README.md" target="_blank">
-            About
-          </a>
-        </div>
-        <div class="col-xs-4">
-          <a href="#">
-            Support
-          </a>
-        </div>
-      </div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg fixed-top">
+        <!--a.navbar-brand(href="/") VanhLe's Blog--><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColapse"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarColapse">
+        <ul class="navbar-nav mr-auto" style="margin-left : 30px;">
+            <li class="navbar-brand"><p> Yé CSM</p></li>
+            <li class="nav-item"><a class="nav-link" href="#">Quản lí bài viết </a></li>
+            <li class="nav-item"><a class="nav-link" href="#!program">Tạo bài viết mới</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Thống kê</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Chỉnh sửa giao diện</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Quản lí tài khoản</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About Yé</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-right" style="margin-right : 30px;">
+            <a class="nav-link" href="https://www.facebook.com/vanhle97"> Xin chào Lllean <img src="images/author.jpg" class="about_img"></i></a>
+            <a class="nav-link logout" href="/">Đăng xuất</a>
+            <!-- <a class="nav-link" href="https://www.instagram.com/viet_anh_mai/"><i class="fab fa-instagram"></i></a>
+            <a class="nav-link" href="https://www.youtube.com/channel/UC7fk3zX0xO9nbrva98PWUUA?view_as=subscriber"><i class="fab fa-youtube"></i></a> -->
+        </ul>
     </div>
-    <!-- End Sidebar -->
+</nav>
+    <div class="container">
+        <div ng-view>
 
-    <div id="content-wrapper">
-      <div class="page-content">
-
-        <!-- Header Bar -->
-        <div class="row header">
-          <div class="col-xs-12">
-            <div class="user pull-right">
-              <div class="item dropdown" uib-dropdown>
-                <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                  <img src="img/avatar.jpg">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Joe Bloggs
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Profile
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
-                    </a>
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="item dropdown" uib-dropdown>
-               <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                  <i class="fa fa-bell-o"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Notifications
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#">Server Down!</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="meta">
-              <div class="page">
-                Dashboard
-              </div>
-              <div class="breadcrumb-links">
-                Home / Dashboard
-              </div>
-            </div>
-          </div>
         </div>
-        <!-- End Header Bar -->
-
-        <!-- Main Content -->
-        <div ui-view></div>
-
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
+    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="yesCSM">
+<html ng-app="yesCMS">
 <head>
         <title>Quản lý Blog by Llean</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,41 +13,20 @@
         <script src="static/stylesheet/bootstrap4.0.0/js/bootstrap.js"></script>
         <script src="static/javascript/admin.module.js"></script>
         <script src="static/javascript/admin.config.js"></script>
-        
+        <script src="static/javascript/admin.service.js"></script>
+        <script src="static/javascript/controller/quanli_Ctl.js"></script>
 
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg fixed-top">
-        <!--a.navbar-brand(href="/") VanhLe's Blog--><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColapse"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarColapse">
-        <ul class="navbar-nav mr-auto" style="margin-left : 30px;">
-            <li class="navbar-brand"><p> Yé CSM</p></li>
-            <li class="nav-item"><a class="nav-link" href="#">Quản lí bài viết </a></li>
-            <li class="nav-item"><a class="nav-link" href="#!program">Tạo bài viết mới</a></li>
-            <li class="nav-item"><a class="nav-link" href="/">Thống kê</a></li>
-            <li class="nav-item"><a class="nav-link" href="/">Chỉnh sửa giao diện</a></li>
-            <li class="nav-item"><a class="nav-link" href="/">Quản lí tài khoản</a></li>
-            <li class="nav-item"><a class="nav-link" href="/about">About Yé</a></li>
-        </ul>
-        <ul class="navbar-nav navbar-right" style="margin-right : 30px;">
-            <a class="nav-link" href="https://www.facebook.com/vanhle97"> Xin chào Lllean <img src="images/author.jpg" class="about_img"></i></a>
-            <a class="nav-link logout" href="/">Đăng xuất</a>
-            <!-- <a class="nav-link" href="https://www.instagram.com/viet_anh_mai/"><i class="fab fa-instagram"></i></a>
-            <a class="nav-link" href="https://www.youtube.com/channel/UC7fk3zX0xO9nbrva98PWUUA?view_as=subscriber"><i class="fab fa-youtube"></i></a> -->
-        </ul>
-    </div>
-</nav>
+    <div ng-include="'static/views/layout.html'"></div>
     <div class="container">
-        <div ng-view>
-
-        </div>
+        <div ng-view></div>
     </div>
 </body>
 </html>

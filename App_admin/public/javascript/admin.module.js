@@ -1,4 +1,4 @@
-angular.module('yesCSM',['ngRoute'])
+angular.module('yesCMS',['ngRoute'])
 .filter('datert',function(){
     return function(date)
     {

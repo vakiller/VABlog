@@ -1,9 +1,8 @@
 .about_img{
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  overflow: hidden;
-  padding: 15px; 
+  overflow: hidden; 
 }
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -81,7 +80,15 @@ nav ul li a:hover{
   position: relative;
 }
 .logout{
-  padding-top: 30px!important;
+  padding-top: 17px!important;
   color: #fa4b2a!important;
   /* padding-bottom: 50px!important; */
+}
+.marginlayout{
+  margin-bottom: 40px!important;
+}
+.list-group-item.active {
+  background-color: #81A4CD!important;
+  color: #FFF!important;
+  border-color: #81A4CD!important;
 }

@@ -15,7 +15,8 @@
         <script src="static/javascript/admin.config.js"></script>
         <script src="static/javascript/admin.service.js"></script>
         <script src="static/javascript/controller/quanli_Ctl.js"></script>
-
+        <script src="static/javascript/controller/markdownEditor_Ctl.js"></script>
+        
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
@@ -25,7 +26,10 @@
 </head>
 <body>
     <div ng-include="'static/views/layout.html'"></div>
-    <div class="container">
+    <div class="quote"><a href="http://localhost:3000/admin#!/quanli">Yé CMS</a>
+        <p>Simple things can make a difference</p>
+    </div>
+    <div>
         <div ng-view></div>
     </div>
 </body>

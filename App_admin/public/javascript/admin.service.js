@@ -5,5 +5,8 @@ angular.module('yesCMS')
     loadpost.getallPost = function(){
         return $http.get(baseUrl+'/Posts');
     }
+    loadpost.getbyId = function(id){
+        return $http.get(baseUrl+'/Posts/'+id);
+    }
     return loadpost; 
 }]);

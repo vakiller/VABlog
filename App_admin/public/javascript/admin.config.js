@@ -5,8 +5,12 @@ angular.module('yesCMS')
         templateUrl : 'static/views/quanli.html',
         controller : 'quanli_Ctl'
     })
+    .when('/chinhsuabaiviet/:id',{
+        templateUrl : 'static/views/markdownEditor.html',
+        controller : 'markdownEditor_Ctl'
+    })
     .when('/taobaiviet',{
-        templateUrl : 'static/views/createnew.html',
+        templateUrl : 'static/views/markdownEditor.html',
         controller : 'createnew_Ctl.js'
     })
     .when('/thongke',{

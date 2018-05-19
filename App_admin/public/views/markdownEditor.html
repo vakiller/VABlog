@@ -1,0 +1,29 @@
+<div class="editor_main">
+<h3 style="text-align: center">
+    Markdown Editor by Llean
+</h3>
+<h6 style="text-align: center">
+    With showdown.js
+</h6>
+
+<div class="form-group container">
+        <label for="Title">Tiêu đề bài viết</label>
+        <input type="text" class="form-control" ng-model="h1Post" ng-value="post.h1Post">
+        <label for="Title">Ảnh tiêu đề</label>
+        <input type="file"  class="form-control" value="{{post.imageHeader}}" ng-model="imageHeader">
+        <input type="button" style="margin-bottom: 30px;margin-left: 30px;" class="btn btn-primary" ng-click="convert()" value="Check Review"> 
+    <div class="rows">
+    <ul style="float: left;" class="list-group">
+        <li class="list-group-item active" style="width: 933px;margin-left: 30px;">Markdown text</li>
+        <textarea ng-model="inputString" style="margin-left: 30px;margin-right: 10px;" ng-value="post.Content" name="MarkdownIn" id="" cols="130" rows="500"></textarea>
+        
+    </ul>
+    <!-- <textarea readonly  name="MarkdownOut" id="" cols="130" rows="500">{{tohtml}}</textarea> -->
+    <ul style="float:right" class="list-group" >
+        <li class="list-group-item active" style="width: 900px!important">Preview post</li>
+        
+        <li class="list-group-item" style="width: 900px!important;height: 5000px;"><div ng-bind-html="tohtml"></div> </li>
+    </ul>
+    </div>
+</div>
+</div>

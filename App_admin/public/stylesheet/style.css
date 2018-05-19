@@ -84,11 +84,38 @@ nav ul li a:hover{
   color: #fa4b2a!important;
   /* padding-bottom: 50px!important; */
 }
-.marginlayout{
+/* .marginlayout{
   margin-bottom: 40px!important;
-}
+} */
 .list-group-item.active {
   background-color: #81A4CD!important;
   color: #FFF!important;
   border-color: #81A4CD!important;
+}
+.quote{
+  text-align: center;
+  padding: 10px;
+  /*  padding-top: 10px; */
+  background-color: #FFF;
+ 
+}
+.quote a{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 75px;
+  color: black;
+  text-decoration: none!important;
+}
+.dateview{
+  color:  #81A4CD;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+}
+.title{
+  color: #007bff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 100%;  
+}
+.editor_main
+{
+  background-color: #FFF!important;
 }

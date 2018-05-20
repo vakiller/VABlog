@@ -1,8 +1,9 @@
 .about_img{
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   overflow: hidden; 
+  margin-bottom: 20px;
 }
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -10,9 +11,6 @@ body {
 }
 .bg{
   background-color: #FFF!important;
-}
-nav ul li a:hover{
-  color: #fa4b2a!important;
 }
 .navbar-brand{
   font-family: 'Fredericka the Great', cursive;
@@ -27,6 +25,7 @@ nav ul li a:hover{
 }
 .navbar-brand{
   color: #fa4b2a!important;
+  font-size: 32px!important;
 }
 .textimg{
   position: absolute;
@@ -36,41 +35,7 @@ nav ul li a:hover{
    margin-top: 300px;
   margin-left: 100px;
 }
-.quote{
-  text-align: center;
-  padding: 20px;
-  padding-top: 40px;
-  background-color: #FFF;
-}
 
-.subject{
-  color: #fa4b2a;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 12px;
-}
-.tag{
-  font-size: 12px;
-  color: silver;
-}
-.tagc {
-  margin-right: 5px!important;
-  font-size: 10px!important;
-}
-.headrecen{
-  font-family: 'Lora', serif;
-  color: rgb(48, 48, 48);
-  list-style-type: none;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.recentPost{
-  list-style-type: none!important;
-  font-family: 'Lora', serif;
-  font-size: 15px;
-  color: silver;
-  padding: 20px;
-}
 .mainfooter{
   margin-top: 800px;
   /* //background-color: #FFF; */
@@ -118,4 +83,30 @@ nav ul li a:hover{
 .editor_main
 {
   background-color: #FFF!important;
+}
+#sidebar{
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  position: fixed;
+  height: 100%;
+  text-align: left;
+}
+#sidebar ul li{
+  padding: 25px , 20px;
+}
+.hoverred li a:hover{
+  color: #fa4b2a!important;
+}
+.toggle{
+  position: fixed;
+  left: 280px;
+  top: 20px;
+}
+.toggle span{
+  display: block;
+  width: 32px;
+  height: 5px;
+  background-color: #fa4b2a;
+  margin: 3px 0px;
 }

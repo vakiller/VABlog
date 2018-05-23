@@ -24,7 +24,7 @@ body {
   margin: 20px;
 }
 .navbar-brand{
-  color: #fa4b2a!important;
+  color: #81A4CD!important;
   font-size: 32px!important;
 }
 .textimg{
@@ -82,7 +82,9 @@ body {
 }
 .editor_main
 {
-  background-color: #FFF!important;
+  /* background-color: #FFF!important; */
+  border-color: #81A4CD;
+  /* border-style: solid; */
 }
 #sidebar{
   margin: 0;
@@ -105,8 +107,23 @@ body {
 }
 .toggle span{
   display: block;
-  width: 32px;
+  width: 30px;
   height: 5px;
-  background-color: #fa4b2a;
+  background-color: #81A4CD;
   margin: 3px 0px;
+}
+.layout_panel{
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 0;
+  flex: none;
+  overflow: hidden;
+}
+.flex-row{
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+}
+.flex{
+  display: flex;
 }

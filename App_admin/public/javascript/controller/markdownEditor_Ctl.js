@@ -1,20 +1,15 @@
 angular.module('yesCMS')
-.controller('markdownEditor_Ctl',['$scope','$sce','$routeParams','loadpost',function($scope,$sce,$routeParams,loadpost){
+.controller('markdownEditor_Ctl',['$sce','$routeParams','$scope','loadpost',function($sce,$routeParams,$scope,loadpost){
     getpost($routeParams.id);
     function getpost(id)
     {
         loadpost.getbyId(id).then(function(response){
             $scope.post = response.data;
+            $scope.inputString = response.data.Content;
             console.log($scope.post.h1Post);
         },function(err){
             console.log(err);
         });
     }
-    $scope.convert = function()
-    {
-        var converter = new showdown.Converter();
-        $scope.tohtml = $sce.trustAsHtml(converter.makeHtml($scope.inputString));
-    }
-    
     console.log("test");
 }]);

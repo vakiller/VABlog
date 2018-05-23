@@ -1,29 +1,39 @@
-<div class="editor_main">
-<h3 style="text-align: center">
-    Markdown Editor by Llean
-</h3>
-<h6 style="text-align: center">
-    With showdown.js
-</h6>
-
-<div class="form-group container">
-        <label for="Title">Tiêu đề bài viết</label>
-        <input type="text" class="form-control" ng-model="h1Post" ng-value="post.h1Post">
-        <label for="Title">Ảnh tiêu đề</label>
-        <input type="file"  class="form-control" value="{{post.imageHeader}}" ng-model="imageHeader">
-        <input type="button" style="margin-bottom: 30px;margin-left: 30px;" class="btn btn-primary" ng-click="convert()" value="Check Review"> 
-    <div class="rows">
-    <ul style="float: left;" class="list-group">
-        <li class="list-group-item active" style="width: 933px;margin-left: 30px;">Markdown text</li>
-        <textarea ng-model="inputString" style="margin-left: 30px;margin-right: 10px;" ng-value="post.Content" name="MarkdownIn" id="" cols="130" rows="500"></textarea>
-        
-    </ul>
-    <!-- <textarea readonly  name="MarkdownOut" id="" cols="130" rows="500">{{tohtml}}</textarea> -->
-    <ul style="float:right" class="list-group" >
-        <li class="list-group-item active" style="width: 900px!important">Preview post</li>
-        
-        <li class="list-group-item" style="width: 900px!important;height: 5000px;"><div ng-bind-html="tohtml"></div> </li>
-    </ul>
+<div class="col-sm-10 editor_main" style="float: right">
+    <ul class="list-group">
+        <li class="list-group-item active">
+            <h3 style="text-align: center">
+                Markdown Editor by Lleann
+            </h3>
+            <h6 style="text-align: center">
+                With showdown.js
+            </h6>
+        </li>
+        <li class="list-group-item">
+        <div class="form-group">
+            <label for="Title">Tiêu đề bài viết</label>
+            <input type="text" ng-model="title" class="form-control" ng-value="post.h1Post">
+            <label for="Title">Ảnh tiêu đề</label>
+            <input type="file" class="form-control" value="{{post.imageHeader}}" ng-model="imageHeader">
+            <label for="Title">Tác giả</label>
+            <input type="text" class="form-control" disabled="disabled" ng-value="post.author[0].name">
+            <label for="Title">Thời gian xuất bản</label>
+            <input type="text" class="form-control"  disabled="disabled" ng-value="post.creatOn | datert | date : 'dd.M.yyyy'">
+            <!-- <button ng-click="convert()">Conver</button> -->
+            <span for="#contentEditor">
+                Nội dung
+            </span>
+            <div id="contentEditor" style="margin-top: 30px">
+                <div style="height: 633px" class="layout_panel flex flex-row row;margin-left:20px;">
+                    <div class="layout_panel"   style="width: 750px;margin-right: 10px;font-size: 15px;border: #81A4CD;border-style: dotted">
+                        <textarea name="" ng-model="inputString" id="" cols="100%" rows="100%"></textarea>
+                    </div>
+                    <div ng-bind-html="inputString | markdown" style="width: 750px;font-size: 15px;border: #81A4CD;border-style: dotted;overflow-x:scroll;overflow-y:scroll;">
+                    </div>
+                </div>                  
+                <!-- <textarea readonly  name="MarkdownOut" id="" cols="130" rows="500">{{tohtml}}</textarea> -->
+            </div>
+            <button ng-click="publish" style="margin-top: 40px;background-color: #81A4CD!important" class="btn btn-success">Xuất bản</button>
+        </div>
+    </li>
     </div>
-</div>
 </div>

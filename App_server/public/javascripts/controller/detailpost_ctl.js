@@ -7,7 +7,7 @@ angular.module("vaBlog").controller("detailpost_ctl",['$scope','$routeParams','$
         loadPost.getPostById(param)
         .then(function(response){
             $scope.post = response.data;
-            var converter = new showdown.Converter();
+            var converter = new showdown.Converter({tables: true});
             $scope.contenthtml = $sce.trustAsHtml(converter.makeHtml($scope.post.Content));
             console.log($scope.contenthtml);
             console.log($scope.post);

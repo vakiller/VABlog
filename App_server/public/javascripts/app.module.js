@@ -4,4 +4,8 @@
      {
          return new Date(date);
      }
- });
+ })
+ .filter('markdown',function(){
+    var converter = new showdown.Converter({tables:true});
+    return converter.makeHtml;
+});
